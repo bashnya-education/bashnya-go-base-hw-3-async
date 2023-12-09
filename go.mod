@@ -1,3 +1,3 @@
-module github.com/Yu-Leo/bmstu-tower-hw-2-async/signer
+module async
 
-go 1.20
+go 1.21.2

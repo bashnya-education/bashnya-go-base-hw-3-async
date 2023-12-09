@@ -23,7 +23,7 @@ var (
 var OverheatLock = func() {
 	for {
 		if swapped := atomic.CompareAndSwapUint32(&dataSignerOverheat, 0, 1); !swapped {
-			fmt.Println("OverheatLock happend")
+			fmt.Println("OverheatLock happened")
 			time.Sleep(time.Second)
 		} else {
 			break
@@ -34,7 +34,7 @@ var OverheatLock = func() {
 var OverheatUnlock = func() {
 	for {
 		if swapped := atomic.CompareAndSwapUint32(&dataSignerOverheat, 1, 0); !swapped {
-			fmt.Println("OverheatUnlock happend")
+			fmt.Println("OverheatUnlock happened")
 			time.Sleep(time.Second)
 		} else {
 			break
